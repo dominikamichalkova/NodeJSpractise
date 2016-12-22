@@ -16,6 +16,10 @@
   ],
   "dependencies": {
     "bootstrap": "^3.3.7",
+<<<<<<< HEAD
     "angular": "^1.6.0"
+=======
+    "font-awesome": "^4.7.0"
+>>>>>>> 298812b5766d5fd1a9c5d46d1eff7e586c4c24bb
   }
 }
