@@ -1,0 +1,14 @@
+<html>
+
+<head>
+</head>
+
+<body>
+    <h1>
+       {{title}}</h1> {{!-- curly braces is a key character in hbs, anywhere where {x} it looks for a variable x --}}
+    <ul> {{#each listabc}}
+        <li>{{this}}</li> {{!-- iterating over this --}} {{/each}}
+    </ul>
+</body>
+
+</html>

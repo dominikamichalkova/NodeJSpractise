@@ -1,25 +1,38 @@
 {
-  "name": "nodejstutorial",
-  "description": "",
-  "main": "app.js",
-  "authors": [
+    "name": "nodejstutorial",
+    "description": "",
+    "main": "app.js",
+    "authors": [
     "domi"
   ],
-  "license": "ISC",
-  "homepage": "",
-  "ignore": [
+    "license": "ISC",
+    "homepage": "",
+    "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
     "tests"
   ],
-  "dependencies": {
-    "bootstrap": "^3.3.7",
-<<<<<<< HEAD
-    "angular": "^1.6.0"
-=======
-    "font-awesome": "^4.7.0"
->>>>>>> 298812b5766d5fd1a9c5d46d1eff7e586c4c24bb
-  }
+    "dependencies": {
+        "bootstrap": "^3.3.7",
+        "font-awesome": "^4.7.0"
+    },
+
+    "overrides": {
+        "bootstrap": {
+            "main": [
+                "dist/js/bootstrap.js",
+                "dist/css/bootstrap.min.css",
+                "less/bootstrap.less"
+            ]
+        },
+        "font-awesome": {
+            "main": [
+                "less/font-awesome.less",
+                "css/font-awesome.min.css",
+                "css/font-awesome.scss"
+            ]
+        }
+    }
 }
