@@ -10,11 +10,18 @@
   "author": "domi",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
     "ejs": "^2.5.5",
     "express": "^4.14.0",
     "express-handlebars": "^3.0.0",
+    "express-session": "^1.14.2",
     "gulp": "^3.9.1",
-    "jade": "^1.11.0"
+    "jade": "^1.11.0",
+    "mongodb": "^2.2.19",
+    "mssql": "^3.3.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
