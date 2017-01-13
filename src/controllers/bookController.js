@@ -2,6 +2,7 @@ var mongodb = require('mongodb').MongoClient;
 var objectId = require('mongodb').ObjectID;
 
 var bookController = function (bookService, nav) {
+    
     var getIndex = function (req, res) {
         var url = 'mongodb://localhost:27017/books'; //auto create a new db instance or use an existing one
         mongodb.connect(url, function (err, db) {
@@ -30,11 +31,16 @@ var bookController = function (bookService, nav) {
                     _id: id
                 },
                 function (err, results) {
-                    res.render('bookView', {
-                        title: 'Books',
-                        nav: nav,
-                        book: results
-                    });
+                    bookService.getBookById(results.bookId,
+                        function (err, book) {
+                            results.book = book; //description
+                            res.render('bookView', { //go to bookview view
+                                title: 'Books',
+                                nav: nav,
+                                book: results
+                            });
+                        }); //call our bookservice, pass in results (_id for mongo, id goodr - must be added to our db)
+
                 });
         });
         //var id = req.params.id;

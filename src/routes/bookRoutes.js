@@ -5,7 +5,8 @@ var objectId = require('mongodb').ObjectID;
 
 //wrapper var router that wrapps the routes
 var router = function (nav) {
-    var bookController = require('../controllers/bookController')(null, nav);
+    var bookService = require('../services/goodrservice')();
+    var bookController = require('../controllers/bookController')(bookService, nav);
     bookRouter.route('/') // /Books/ 
         .get(bookController.getIndex); //now we return controllers
     //.post() for creating users 
