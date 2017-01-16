@@ -7,13 +7,15 @@ var books = [
     {
         "title": "The Atonement",
         "author": "Ian McEwan",
-        "year": '2005'
+        "year": '2005',
+        bookId: 6867
     },
 
     {
         "title": "Crime and Punishment",
         "author": "F.M. Dostojevkij",
-        "year": '1936'
+        "year": '1936',
+        bookId: 7144
     }];
 
 var router = function (nav) {

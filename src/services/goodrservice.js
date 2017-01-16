@@ -8,9 +8,11 @@ var goodreadsService = function () { //will handle all GR APIs
 
     var getBookById = function (id, call) { //takes a book id as a parameter, callback when all is done
 
+        //request API key for GR, book.show
+        //implement http .get request out to goodrservice and then call end() -->define options
         var options = {
             host: 'www.goodreads.com',
-            path: '/book/show/6867?format=xml&key=DzltjhC8jXxusVju2AqHXw'
+            path: '/book/show/' + id + '?format=xml&key=DzltjhC8jXxusVju2AqHXw'
         };
 
         var callback = function (response) {
@@ -30,8 +32,6 @@ var goodreadsService = function () { //will handle all GR APIs
 
         };
 
-
-        //implement http .get request out to goodrservice and then call end() -->define options
         http.request(options, callback).end();
     };
     return {

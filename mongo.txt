@@ -1,0 +1,29 @@
+
+      [  {
+            "title": "Pride and Prejudice",
+            "author": "Jane Austin",
+	    "year":"1901"
+    },
+        {
+            "title": "Mrs. Doloway",
+            "author": "Virginia Woolf",
+ 	    "year":"1897"
+    },
+        {
+            "title": "Daft Wee Stories",
+            "author": "Limmy",
+	    "year":"2016"
+    }]
+
+show dbs
+use book //new db or switch to existing one
+db //current one
+
+db.createUser({
+user:"domi",
+pwd:"1234",
+roles:["readWrite","dbAdmin"]});
+db.createCollection("booklist") //like a table
+show collections
+db.booklist.insert ([{..},{..}])
+db.booklist.find().pretty()
