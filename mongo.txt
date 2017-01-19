@@ -13,6 +13,11 @@
             "title": "Daft Wee Stories",
             "author": "Limmy",
 	    "year":"2016"
+    },
+	{
+	    "title": "The Girls",
+	    "author": "Emma Cline",
+	    "year":"2016"
     }]
 
 show dbs
