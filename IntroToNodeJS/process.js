@@ -19,4 +19,4 @@ process.on('SIGTERM', function () { //POSIX signals listening for SIG term event
 
 console.log('Node is running as process #' + process.pid);
 
-//on another terminal run kill -TERM processID(#) is going to invoke the func and print out error command on previous terminal, we can still ineract with the program because it is running process.kill(#) terminate the process ID#
+//on another terminal run kill -TERM # command is going to invoke the func and print out error command on previous terminal, we can still ineract with the program because it is running; node -> process.kill # terminate the process ID#; tskill #

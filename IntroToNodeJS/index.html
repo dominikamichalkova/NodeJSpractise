@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <script src="/socket.io/socket.io.js"></script>
+    <title>Test</title>
+    <script type="text/javascript">
+        var socket;
+
+        function onload() {
+            socket = io.connect();
+            socket.on('timer', function (data) { //listening for the timer event
+                document.getElementById("timer").innerHTML = data; //when we get it, we update portion of html to show data
+            }); // with the timestamp that came with the timer event
+        };
+
+        function submitData() {
+            var data = document.getElementById("inputdata").value;
+            socket.emit('submit', data);
+        };
+        //whenever we click on the button, submit() gets involved 
+        //timer event is received form server
+        //get input data, generate - emit the submit event and pass data along with the event
+    </script>
+</head>
+
+<body onload="onload()">
+    <h1>Sample websocket page</h1>
+    <p>Timer: <span id="timer"></span></p>
+    <form action="#">
+        <p>Data:
+            <input type="text" id="inputdata" />
+            <input type="button" onClick="submitData()" value='submit'>
+        </p>
+    </form>
+</body>
+
+</html>
