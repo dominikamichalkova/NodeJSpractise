@@ -1,6 +1,6 @@
 var spawn = require('child_process').spawn,
     tasklist = spawn('tasklist', ['/M']), //spawning 2 processes
-    find = spawn('find', ['node'], ['C:\Users\IBM_ADMIN\Documents\NodeJSpractise']);
+    find = spawn('find', ['node']);
 
 tasklist.stdout.pipe(find.stdin);
 find.stdout.pipe(process.stdout);
